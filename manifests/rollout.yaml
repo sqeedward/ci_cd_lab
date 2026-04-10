@@ -4,6 +4,8 @@ metadata:
   name: go-simple-webserver
   labels:
     app: go-simple-webserver
+  annotations:
+    redeploy: "123"
 spec:
   replicas: 10
   strategy:
