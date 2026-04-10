@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: webserver
-          image: ghcr.io/sqeedward/ci_cd_lab:latest
+          image: ghcr.io/sqeedward/go-simple-webserver@sha256:809a2243c3978bfcbcccf3ec76059aea768314dca47b73c78ad93cc0f13
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
