@@ -9,7 +9,9 @@ spec:
   strategy:
     canary:
       steps:
-        - setWeight: 50
+        - setWeight: 25
+        - pause: { duration: 60s }
+        - setWeight: 75
         - pause: { duration: 60s }
         - setWeight: 100
   selector:
@@ -22,7 +24,7 @@ spec:
     spec:
       containers:
         - name: webserver
-          image: ghcr.io/sqeedward/ci_cd_lab:latest
+          image: ghcr.io/sqeedward/cii_cd_lab:latest
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
